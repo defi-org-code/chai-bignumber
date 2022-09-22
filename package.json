@@ -1,24 +1,18 @@
 {
-  "name": "chai-bignumber",
+  "name": "@defi.org/chai-bignumber",
   "version": "3.0.0",
   "description": "Chai assertions for comparing arbitrary-precision decimals using the bignumber.js library",
-  "main": "chai-bignumber.js",
-  "scripts": {
-    "lint": "jshint *.js",
-    "test": "mocha test/*.js"
-  },
-  "devDependencies": {
-    "bignumber.js": "8",
-    "chai": "4",
-    "jshint": "2",
-    "mocha": "8"
-  },
-  "author": "António Marques <me@antoniomarques.eu>",
+  "main": "./dist/chai-bignumber.js",
+  "types": "./dist/chai-bignumber.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "danielz@orbs.com",
   "license": "MIT",
-  "homepage": "https://github.com/asmarques/chai-bignumber",
+  "homepage": "https://github.com/defi-org-code/chai-bignumber",
   "repository": {
     "type": "git",
-    "url": "git://github.com/asmarques/chai-bignumber"
+    "url": "git://github.com/defi-org-code/chai-bignumber"
   },
   "keywords": [
     "chai",
@@ -35,7 +29,26 @@
     "float",
     "bignumber"
   ],
-  "files": [
-    "chai-bignumber.js"
-  ]
+  "peerDependencies": {
+    "bignumber.js": "*"
+  },
+  "devDependencies": {
+    "bignumber.js": "9.x",
+    "@types/chai": "4.x",
+    "@types/mocha": "9.x",
+    "@types/lodash": "4.x",
+    "lodash": "4.x",
+    "chai": "4.x",
+    "mocha": "10.x",
+    "prettier": "2.x",
+    "typescript": "4.x",
+    "ts-node": "10.x"
+  },
+  "scripts": {
+    "test": "env mocha -r ts-node/register 'test/**/*.ts'",
+    "build": "tsc"
+  },
+  "prettier": {
+    "printWidth": 180
+  }
 }
