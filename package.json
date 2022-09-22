@@ -1,6 +1,6 @@
 {
   "name": "@defi.org/chai-bignumber",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Chai assertions for comparing arbitrary-precision decimals using the bignumber.js library",
   "main": "./dist/chai-bignumber.js",
   "types": "./dist/chai-bignumber.d.ts",
